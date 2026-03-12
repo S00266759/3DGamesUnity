@@ -13,7 +13,9 @@ public class PlayerInteraction : MonoBehaviour
     private LayerMask InteractionLayers; //what layers are you going to raycast to? (environment and Interactables)
 
     private RaycastHit raycastHit;
+
     private IInteractable currentInteractable;
+    private IFocusable currentFocusable;
 
 
     private void OnEnable()
@@ -36,6 +38,10 @@ public class PlayerInteraction : MonoBehaviour
 
     private void ClearFocus()
     {
+        if (currentFocusable != null && (currentFocusable as Object) != null)
+            currentFocusable.Unfocus(gameObject);
+
+        currentFocusable = null;
         currentInteractable = null;
     }
 
@@ -54,6 +60,17 @@ public class PlayerInteraction : MonoBehaviour
             InteractionLayers))
         {
             raycastHit.collider.gameObject.TryGetComponent<IInteractable>(out currentInteractable);
+            raycastHit.collider.gameObject.TryGetComponent<IFocusable>(out IFocusable newFocusable);
+
+            if (newFocusable != currentFocusable)
+            {
+                ClearFocus();
+
+                currentFocusable = newFocusable;
+
+                if (currentFocusable != null)
+                    currentFocusable.Focus(gameObject);
+            }
         }
         else
         {

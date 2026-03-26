@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9439d893e6124c64fafe5fae5a55a61e, type: 3}
+  m_Name: Ipsum Book
+  m_EditorClassIdentifier: Assembly-CSharp::BookData
+  ID: Ipsum Book
+  Pages:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae maximus quam.
+    Nullan elementum, ante eget porttitor iaculis, orci felis laoreet turpis, in
+    finibus ligula orci fermentum orci. Nullam nec
+  - Suspendisse potenti. Pellentesque blandit egestas velit, sit amet allquam augue
+    tempor in. Aenean effcitur leo vitae mauris ornare finibus. Duis sed felis quid
+    lacus fermentum faucibus. Aliquam
+  - "In viverra non libero ac imperdiet. Fusce eu pellentesque lacus.\nFusce massa
+    justo, accumsan eget cursus sed, viverra a metus. \nEtiam tempus egestas bibendum.
+    Maecenas vel lorem eu arcu varius "

@@ -11,4 +11,14 @@ public class LevellingData : ScriptableObject
     {
         return (int)Curve.Evaluate(level);
     }
+
+    //public LevellingData LevellingData;
+
+    //void Start()
+    //{
+    //    Debug.Log(LevellingData.GetRequiredXP(1));
+    //    Debug.Log(LevellingData.GetRequiredXP(10));
+    //    Debug.Log(LevellingData.GetRequiredXP(50));
+    //    Debug.Log(LevellingData.GetRequiredXP(100));
+    //}
 }
